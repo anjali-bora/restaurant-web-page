@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reservation Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+
+<body>
+
+    <section class="banner">
+        <a href="restaurant.html">
+            <button class="button">Back</button>
+        </a>
+        <h2>BOOK YOUR TABLE NOW</h2>
+        <div class="card-container">
+            <div class="card-img">
+                <!-- image here -->
+            </div>
+
+            <div class="card-content">
+                <h3>Reservation</h3>
+                <form onsubmit="event.preventDefault()">
+                    <div class="form-row">
+                        <select name="days" id="day">
+                            <option value="day-select">Select Day</option>
+                            <option value="sunday">Sunday</option>
+                            <option value="monday">Monday</option>
+                            <option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option>
+                            <option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option>
+                            <option value="saturday">Saturday</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <input type="text" placeholder="Full Name" id="fname">
+                        <input type="text" placeholder="Phone Number" id="number">
+                    </div>
+
+                    <div class="form-row">
+                        <label for="datetime">Select Date & time</label>
+                        <input type="datetime-local" name="datetime" id="datetime">
+                        <input type="number" id="person" placeholder="Person" min="1">
+                        <input type="submit" id="booktable" value="BOOK TABLE">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+<script src="allreservation.js"></script>
+</body>
+</html>

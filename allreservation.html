@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Reservation Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="allreservation.css">
+</head>
+
+<body>
+
+    <section class="banner">
+        <a href="restaurant.html">
+            <button class="button">Back</button>
+        </a>
+        <h2>RESERVED TABLE LIST</h2>
+        <table id="mytable">
+            <tr>
+                <th>Name</th>
+                <th>Phone_Number</th>
+                <th>Day</th>
+                <th>Date&Time</th>
+                <th>Person_Number</th>
+            </tr>
+            <tbody id="list">
+
+            </tbody>
+        </table>
+    </section>
+    <script>
+        function showData() {
+            let display = document.getElementById("list")
+            let locaData = localStorage.getItem('data')
+            let resData = locaData !== null ? JSON.parse(locaData) : []
+
+            resData.forEach((element, index) => {
+                display.innerHTML += `
+    <tr>
+    <td>${element.fname}</td>
+    <td>${element.number}</td>
+    <td>${element.day}</td>
+    <td>${element.datetime}</td>
+    <td>${element.person}</td>
+    </tr>
+    `
+            });
+        }
+
+
+    showData();
+    </script>
+</body>
+
+</html>
